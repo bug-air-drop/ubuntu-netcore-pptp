@@ -1,5 +1,5 @@
 ARG REPO=mcr.microsoft.com/dotnet/core/runtime-deps
-FROM $REPO:3.0-bionic
+FROM ubuntu:18.04
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
