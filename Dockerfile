@@ -9,7 +9,7 @@ RUN apt-get update \
 # Install .NET Core
 ENV DOTNET_VERSION 3.0.0-rc1-19456-20
 
-RUN sudo apt-get install -y pptp-linux binutils curl net-tools gpg
+RUN apt-get install -y pptp-linux binutils curl net-tools gpg
 
 RUN curl -SL --output dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Runtime/$DOTNET_VERSION/dotnet-runtime-$DOTNET_VERSION-linux-x64.tar.gz \
     && dotnet_sha512='ffa9dac658d83d785b92ae29f6931d9069e96f255b6778e0ed58346005ab425c659605408c628c6ccae683ebbe144d9c4bfaba83b20146966d04d4028c6fb4eb' \
